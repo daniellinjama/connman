@@ -255,7 +255,8 @@ AM_CFLAGS = @DBUS_CFLAGS@ @GLIB_CFLAGS@ @XTABLES_CFLAGS@ \
 				-DPLUGINDIR=\""$(build_plugindir)"\" \
 				-DSCRIPTDIR=\""$(build_scriptdir)"\" \
 				-DDEFAULT_STORAGE_ROOT=\""$(storageroot)\"" \
-				-DCONFIGDIR=\""$(configdir)\""
+				-DCONFIGDIR=\""$(configdir)\"" \
+				-DRUNSTATEDIR=\""$(runstatedir)\""
 
 if VPN
 AM_CPPFLAGS = -I$(builddir)/include -I$(srcdir)/gdbus
@@ -274,6 +275,7 @@ src_connmand_CFLAGS = @DBUS_CFLAGS@ @GIO_CFLAGS@ @GOBJECT_CFLAGS@ @GLIB_CFLAGS@ 
 				-DDEFAULT_USER_STORAGE=\""$(userstorage)"\" \
 				-DCONFIGDIR=\""$(configdir)"\" \
 				-DDEFAULT_VPN_STATEDIR=\""$(vpn_statedir)"\" \
+				-DRUNSTATEDIR=\""$(runstatedir)"\" \
 				-I$(builddir)/src
 
 EXTRA_DIST = src/genbuiltin src/connman-dbus.conf src/connman-polkit.conf \
@@ -290,6 +292,7 @@ vpn_connman_vpnd_CFLAGS = @DBUS_CFLAGS@ @GLIB_CFLAGS@ @DBUSACCESS_CFLAGS@ \
 				-DDEFAULT_STORAGE_ROOT=\""$(storageroot)"\" \
 				-DDEFAULT_USER_STORAGE=\""$(userstorage)"\" \
 				-DCONFIGDIR=\""$(configdir)"\" \
+				-DRUNSTATEDIR=\""$(runstatedir)"\" \
 				-I$(builddir)/vpn
 
 endif
