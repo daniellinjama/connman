@@ -287,6 +287,7 @@ vpn_connman_vpnd_CFLAGS = @DBUS_CFLAGS@ @GLIB_CFLAGS@ @DBUSACCESS_CFLAGS@ \
 				$(builtin_vpn_cflags) \
 				-DCONNMAN_PLUGIN_BUILTIN \
 				-DDEFAULT_VPN_STATEDIR=\""$(vpn_statedir)"\" \
+				-DRUNSTATEDIR=\""$(runstatedir)"\" \
 				-DPLUGINDIR=\""$(build_vpn_plugindir)"\" \
 				-DSCRIPTDIR=\""$(build_scriptdir)"\" \
 				-DDEFAULT_STORAGE_ROOT=\""$(storageroot)"\" \
