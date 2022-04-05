@@ -48,6 +48,7 @@ BuildRequires:  libtool
 BuildRequires:  usb-moded-devel >= 0.86.0+mer31
 BuildRequires:  libglibutil-devel
 BuildRequires:  libdbusaccess-devel
+BuildRequires: autoconf >= 2.70
 
 %description
 Connection Manager provides a daemon for managing Internet connections
@@ -199,7 +200,7 @@ This package provides OpenFortiNet VPN plugin for connman.
     --with-systemdunitdir=%{_unitdir} \
     --enable-systemd \
     --with-tmpfilesdir=%{_prefix}/lib/tmpfiles.d \
-    runstatedir=/run
+    --runstatedir=/run
 
 %make_build
 
